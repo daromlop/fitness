@@ -1,0 +1,770 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&display=swap");
+@import url(footer.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans";
+}
+
+h2 {
+    margin-top: 75px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 0;
+    width: 300px;
+    text-align: center;
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+    font-size: 2.4em;
+    font-weight: 500;
+    color: #578144;
+    border-top: double 5px black;
+    border-bottom: solid 4px black;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.container-img {
+    height: 55%;
+}
+
+.container-description {
+    height: 45%;
+    padding: 20px 0;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    background-image: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.2) 0%,
+            rgba(0, 0, 0, 0.8) 100%),
+        url("../img/trainerback.png");
+    width: 100%;
+    height: 500px;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Header - Bar */
+
+.header-container {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 999999;
+}
+
+.headerback {
+    position: absolute;
+    width: 100%;
+    transition: all 0.5s;
+    background: #141217;
+}
+
+.header-container-bar {
+    display: table;
+    width: 98%;
+    margin: 20px;
+    padding: 10px;
+    color: white;
+    margin: auto;
+}
+
+.header-container-bar h1 {
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+}
+
+.fa-dumbbell {
+    font-size: 2em;
+    float: left;
+    padding-top: 2px;
+    color: #7cb661;
+}
+
+.main-title {
+    float: left;
+}
+
+.nav__toggler {
+    position: relative;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #7cb661;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.nav__toggler span {
+    height: 3px;
+    width: 24px;
+    background-color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav__toggler span::before,
+.nav__toggler span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.nav__toggler span::before {
+    left: 0;
+    transform: translateY(-8px);
+}
+
+.nav__toggler span::after {
+    right: 0;
+    transform: translateY(8px);
+}
+
+.nav__toggler.active span {
+    background-color: transparent;
+}
+
+.nav__toggler.active span::before {
+    transform: rotate(45deg);
+}
+
+.nav__toggler.active span::after {
+    transform: rotate(-45deg);
+}
+
+.main-nav {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    top: 57px;
+    left: 0;
+    transition: all 0.5s;
+}
+
+.main-nav ul {
+    list-style: none;
+    background: #141217;
+}
+
+.main-nav li {
+    text-align: center;
+    padding: 20px 0px;
+    border-top: 1px solid #0a0a0a;
+    transition: all 0.5s;
+}
+
+.main-nav li:hover {
+    background: #5c8848;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #141217;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header - Cover */
+
+.cover-container-img {
+    position: relative;
+    text-align: center;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+.cover-container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: brightness(50%);
+}
+
+.cover-container-description {
+    position: absolute;
+    width: 100%;
+    color: white;
+    text-align: center;
+    top: 40%;
+}
+
+.cover-container-description h1 {
+    font-size: 3.5em;
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+    font-weight: 500;
+}
+
+.cover-container-description a {
+    text-decoration: none;
+    color: white;
+    background: #7cb661;
+    border: 10px solid #7cb661;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 0px 5px;
+    transition: all 0.5s;
+    user-select: none;
+}
+
+.cover-container-description a:hover {
+    background: #578144;
+    border: 10px solid #578144;
+}
+
+/* Section - Quien Soy */
+
+.qs-container {
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 30px;
+    box-shadow: 2px 2px 10px #666;
+}
+
+.qs-container img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.qs-container h3 {
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #578144;
+}
+
+.qs-container p {
+    padding: 0px 10px;
+    text-align: center;
+}
+
+/* Section - Mis Servicios */
+
+#misservicios .ms-container {
+    padding: 0px 25px 20px;
+}
+
+#misservicios ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+    margin: 50px auto 25px;
+    list-style: none;
+}
+
+#misservicios ul li {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 2px 2px 10px #666;
+    border-radius: 20px;
+}
+
+#misservicios ul li h4 {
+    font-size: 1em;
+    margin-top: 20px;
+    padding: 0px 5px;
+}
+
+#misservicios ul li i {
+    font-size: 3em;
+    color: #578144;
+    transition: all 0.2s;
+}
+
+#misservicios ul li i:hover {
+    font-size: 3.6em;
+}
+
+/* Section - Planes */
+
+#planes .pl-container {
+    margin: 75px auto;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    box-shadow: 2px 2px 10px #666;
+    border-radius: 30px;
+}
+
+#planes .seleccionplan {
+    position: absolute;
+    width: 100%;
+    top: 49%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/*#planes .container:before {
+  content: "OFERTA";
+  font-family: "Bebas Neue";
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: white;
+  padding: 20px 10px;
+  background: #578144;
+  border-radius: 50%;
+  position: absolute;
+  left: 80%;
+  top: -20px;
+}*/
+
+#planes .pl-container .container-img {
+    position: relative;
+    overflow: hidden;
+}
+
+#planes .pl-container .container-img img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    max-height: 300px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: all 0.5s;
+}
+
+#planes .pl-container h3 {
+    margin-bottom: 10px;
+    font-family: "Bebas Neue";
+    letter-spacing: 1px;
+    font-size: 1.6em;
+    font-weight: 500;
+    color: #578144;
+}
+
+#planes .pl-container .seleccionplan {
+    position: absolute;
+    top: 101%;
+    transition: all 0.5s;
+}
+
+#planes .pl-container .seleccionplan h4 {
+    width: 100%;
+    font-family: "Bebas Neue";
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: white;
+    background: #578144;
+    padding: 10px 0;
+}
+
+#planes .pl-container .seleccionplan h4 a {
+    text-decoration: none;
+    color: white;
+}
+
+#planes .pl-container:hover .seleccionplan {
+    top: 87%;
+}
+
+.pl-container :hover img {
+    filter: brightness(50%);
+}
+
+.pl-container p {
+    padding: 0px 10px;
+}
+
+/* Section - ¿Qué opinan mis clientes? y Contacto*/
+
+#misclientesycontacto {
+    background-image: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.8) 0%,
+            rgba(0, 0, 0, 0.8) 100%),
+        url("../img/backg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 25% 25%;
+    padding: 10px 0;
+}
+
+#misclientesycontacto .container {
+    width: 100%;
+    max-width: 700px;
+}
+
+#misclientesycontacto h2 {
+    color: white;
+    font-size: 2em;
+    margin-top: 0;
+    width: 80%;
+    border-top: none;
+    border-bottom: solid 4px #578144;
+}
+
+/* Section - ¿Qué opinan mis clientes? y Contacto - Slider */
+
+#misclientesycontacto .slider-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#misclientesycontacto .slider-section .container-slider {
+    display: flex;
+    width: 400%;
+    margin-left: -100%;
+}
+
+#misclientesycontacto .slider-section .fa-chevron-left {
+    position: absolute;
+    color: #578144;
+    top: 62%;
+    left: 7%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#misclientesycontacto .slider-section .fa-chevron-right {
+    position: absolute;
+    color: #578144;
+    top: 62%;
+    right: 7%;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+#misclientesycontacto .slider-section .container-slider .slider-content {
+    color: white;
+    margin: 10px 100px;
+}
+
+#misclientesycontacto .slider-section .container-slider .slider-content .fa-quote-left {
+    font-size: 2em;
+    color: #578144;
+    margin: 10px 0;
+}
+
+#misclientesycontacto .slider-section .container-slider .slider-content h5 {
+    font-size: 1.05em;
+    margin-top: 10px;
+}
+
+/* Section - ¿Qué opinan mis clientes? y Contacto - Contacto */
+
+#misclientesycontacto .contact {
+    border-top: 1px solid rgba(0, 0, 0, 0.329);
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+#misclientesycontacto .contact form {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+#misclientesycontacto .contact input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 1.05em;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Open Sans";
+}
+
+#misclientesycontacto .contact textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+    min-width: 100%;
+    resize: none;
+}
+
+#formbutton {
+    background: #578144;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Estilos */
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 2.2em;
+        width: 80%;
+    }
+
+    /* Header - Cover */
+
+    .cover-container-description h1 {
+        font-size: 3em;
+        font-family: "Bebas Neue";
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+        font-weight: 500;
+    }
+
+    /* Section - ¿Qué opinan mis clientes? y Contacto - Slider */
+
+    #misclientesycontacto .slider-section .container-slider .slider-content {
+        color: white;
+        margin: 10px 80px;
+    }
+}
+
+@media (min-width: 425px) {
+    /* Header - Cover */
+
+    .cover-container-img img {
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Section - Planes */
+
+    #planes .pl-container .seleccionplan {
+        position: static;
+    }
+
+    .pl-container :hover img {
+        filter: brightness(100%);
+    }
+}
+
+@media (min-width: 768px) {
+    /* Header - Cover */
+
+    .cover-container-img img {
+        width: 500px;
+    }
+
+    .cover-container-img {
+        padding-top: 50px;
+    }
+
+    /* Section - Mis Servicios */
+
+    #misservicios ul {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        text-align: center;
+        margin: 50px auto 25px;
+        list-style: none;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* Header - Bar */
+
+    .fa-dumbbell {
+        margin-left: 5%;
+    }
+
+    .main-nav {
+        opacity: 1;
+        float: right;
+        visibility: visible;
+        position: static;
+        width: 60%;
+        padding-top: 5px;
+        transition: all 0.5s;
+        margin-right: 5%;
+    }
+
+    .main-nav ul {
+        float: right;
+        list-style: none;
+        background: none;
+    }
+
+    .main-nav li {
+        display: inline;
+        text-align: center;
+        padding: 20px 10px;
+        border-top: 0px solid #0a0a0a;
+        transition: all 0.5s;
+    }
+
+    .main-nav li:hover {
+        background: none;
+    }
+
+    .main-nav a:hover {
+        color: #83c066;
+    }
+
+    .main-nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em;
+        font-weight: 600;
+        transition: all 0.1s;
+    }
+
+    .nav__toggler {
+        visibility: hidden;
+        opacity: 0;
+        transition: none;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        width: 60%;
+        max-width: none;
+    }
+
+    header {
+        height: 800px;
+    }
+
+    /* Header - Bar */
+
+    .main-nav {
+        margin-right: 7.5%;
+    }
+
+    .fa-dumbbell {
+        margin-left: 7.5%;
+    }
+
+    /* Header - Cover */
+
+    .cover-container-description h1 {
+        font-size: 5em;
+    }
+
+    .cover-container-description a {
+        font-size: 1.2em;
+    }
+
+    .cover-container-img img {
+        width: 600px;
+    }
+
+    /* Section - Quien Soy */
+
+    #quiensoy .container {
+        width: 40%;
+    }
+
+    /* Section - Mis Servicios */
+
+    #misservicios ul {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        margin: 50px auto 25px;
+    }
+
+    /* Section - Planes */
+
+    #planes .planes-container {
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #planes .pl-container {
+        margin: 75px 20px;
+        width: 45%;
+    }
+
+    /* Section - ¿Qué opinan mis clientes? y Contacto*/
+
+    #misclientesycontacto .container {
+        width: 60%;
+        max-width: none;
+    }
+
+    /* Section - ¿Qué opinan mis clientes? y Contacto - Slider */
+
+    #misclientesycontacto .slider-section .fa-chevron-left {
+        left: 2%;
+    }
+
+    #misclientesycontacto .slider-section .fa-chevron-right {
+        right: 2%;
+    }
+}
+
+@media (min-width: 2560px) {
+    header {
+        height: 900px;
+    }
+
+    /* Header - Bar */
+
+    .main-nav {
+        margin-right: 10%;
+    }
+
+    .fa-dumbbell {
+        margin-left: 10%;
+    }
+
+    /* Header - Cover */
+
+    .cover-container-description h1 {
+        font-size: 6em;
+    }
+
+    .cover-container-description a {
+        font-size: 1.5em;
+    }
+
+    .cover-container-img img {
+        width: 600px;
+    }
+}
