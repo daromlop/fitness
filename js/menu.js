@@ -23,6 +23,10 @@ button.classList.toggle('active');
 });
 
 mainNav.addEventListener('click', function(){
-mainNav.classList.remove('show');
+if (media.matches) { // Solo se produce este cambio cuando la resolución es menor a 1024px, para evitar que "button" cambie de clase cuando la resolución sea 1024px o mayor
+
+} else {
 button.classList.toggle('active');
+mainNav.classList.remove('show');
+}
 });
